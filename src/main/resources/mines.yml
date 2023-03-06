@@ -1,0 +1,92 @@
+mines:
+  dirtbay:
+    rank: ONE
+    world: "world"
+    pos1:
+      x: -204
+      y: 79
+      z: 272
+    pos2:
+      x: -237
+      y: 107
+      z: 298
+    spawnpos:
+      x: -237
+      y: 107
+      z: 300
+  bromidus:
+    rank: TWO
+    world: "world"
+    pos1:
+      x: -153
+      y: 75
+      z: 302
+    pos2:
+      x: -157
+      y: 79
+      z: 306
+    spawnpos:
+      x: -237
+      y: 107
+      z: 300
+  coldhollow:
+    rank: THREE
+    world: "world"
+    pos1:
+      x: -160
+      y: 75
+      z: 312
+    pos2:
+      x: -168
+      y: 79
+      z: 315
+    spawnpos:
+      x: -237
+      y: 107
+      z: 300
+  crystalcove:
+    rank: FOUR
+    world: "world"
+    pos1:
+      x: -153
+      y: 75
+      z: 280
+    pos2:
+      x: -157
+      y: 79
+      z: 290
+    spawnpos:
+      x: -237
+      y: 107
+      z: 300
+  duchil:
+    rank: FIVE
+    world: "world"
+    pos1:
+      x: -160
+      y: 75
+      z: 280
+    pos2:
+      x: -168
+      y: 79
+      z: 290
+    spawnpos:
+      x: -237
+      y: 107
+      z: 300
+  hollowgrave:
+    rank: SIX
+      world: "world"
+      pos1:
+        x: -140
+        y: 75
+        z: 280
+      pos2:
+        x: -148
+        y: 79
+        z: 290
+      spawnpos:
+        x: -237
+        y: 107
+        z: 300
+

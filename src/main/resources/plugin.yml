@@ -1,0 +1,34 @@
+name: ArcticPrisons
+description: core for arcticprisons
+api-version: 1.13
+version: 1.0-SNAPSHOT
+main: net.arcticnetwork.prisons.Main
+depend:
+  - Vault
+  - ProtocolLib
+commands:
+  reset:
+    description: resets the specified mine (if none specified resets all)
+    aliases:
+      - resetmine
+      - minereset
+  warp:
+    description: teleports you to a specified warp.
+    aliases:
+      - warptomine
+      - minetp
+  build:
+    description: turns on or off build mode
+    aliases:
+      - buildmode
+  mutechat:
+    description: mutes the chat only people with bypass permission can talk.
+    aliases:
+      - mchat
+      - mc
+      - lockdown
+  permission:
+      description: give a user a permission.
+  edit:
+    description:  edit a players stats (prestige, rank, serverrank)
+
