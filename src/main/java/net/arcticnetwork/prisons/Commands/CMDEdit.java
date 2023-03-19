@@ -21,15 +21,15 @@ public class CMDEdit extends Utils implements CommandExecutor {
                 switch(args[0]) {
                     case "prestige":
                         pClass.prestige = Long.parseLong(args[1]);
-                        pClass.sendMessage("&b[&fArctic Prisons&b] &9Set your prestige to: " + args[1]);
+                        pClass.sendMessage("&f&lArctic&b&lPrison &8➣ &9Set your prestige to: " + args[1]);
                         break;
                     case "srank":
                         pClass.serverrank = ServerRank.getServerRankByID(args[1]);
-                        pClass.sendMessage("&b[&fArctic Prisons&b] &9Set your rank to: " + args[1]);
+                        pClass.sendMessage("&f&lArctic&b&lPrison &8➣ &9Set your rank to: " + args[1]);
                         break;
                     case "rank":
                         pClass.rank =  Ranks.getFromName(args[1]);
-                        pClass.sendMessage("&b[&fArctic Prisons&b] &9Set your mining rank to: " + args[1]);
+                        pClass.sendMessage("&f&lArctic&b&lPrison &8➣ &9Set your mining rank to: " + args[1]);
                         break;
                 }
 

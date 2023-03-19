@@ -31,4 +31,6 @@ commands:
       description: give a user a permission.
   edit:
     description:  edit a players stats (prestige, rank, serverrank)
+  get:
+    description: get an item
 

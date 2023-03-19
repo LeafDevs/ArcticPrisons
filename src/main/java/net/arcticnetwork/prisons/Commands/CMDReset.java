@@ -17,7 +17,7 @@ public class CMDReset extends Utils implements CommandExecutor {
         if(sender instanceof Player) {
             Player plr = (Player) sender;
             if(!plr.hasPermission("arcticprisons.admin")) {
-                Main.getPClass(plr).sendMessage("&b[&fArctic Prisons&b]&f You do not have permission to run this command!");
+                Main.getPClass(plr).sendMessage("&f&lArctic&b&lPrison &8➣&f You do not have permission to run this command!");
                 return false;
             }
             if(args.length == 1) {

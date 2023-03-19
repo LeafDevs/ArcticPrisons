@@ -14,6 +14,7 @@ import net.arcticnetwork.prisons.Main;
 import net.arcticnetwork.prisons.enums.Ranks;
 import net.arcticnetwork.prisons.enums.ServerRank;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.scheduler.BukkitRunnable;
 
 
 @SuppressWarnings("deprecation")
@@ -176,25 +177,23 @@ public class PClass extends Utils {
             return false;
         }
         currentlyTeleporting = true;
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.plugin, new Runnable() {
-
+        new BukkitRunnable() {
             int tptimer = 5;
 
             @Override
             public void run() {
-                sendMessage("&b[&fArctic Prisons&b] &fYou will be teleported in &9" + tptimer);
+                sendMessage("&f&lArctic&b&lPrison &8➣ &fYou will be teleported in &9" + tptimer);
 
                 if(tptimer <= 0) {
                     plr.teleport(loc);
-                    sendMessage("&b[&fArctic Prisons&b] &fYou have been successfully teleported!");
+                    sendMessage("&f&lArctic&b&lPrison &8➣ &fYou have been successfully teleported!");
                     currentlyTeleporting = false;
                 }
                 if(tptimer >= 0) {
                     tptimer--;
                 }
             }
-            
-        }, 0, 20);
+        }.runTaskTimer(Main.getPlugin(), 0, 20);
         return true;
     }
 

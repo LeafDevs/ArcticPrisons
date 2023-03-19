@@ -16,10 +16,10 @@ public class CMDBuild extends Utils implements CommandExecutor {
             if(plr.hasPermission("build")) {
                 if(plr.buildMode) {
                     plr.buildMode = false;
-                    plr.sendMessage("&b[&fArctic Prisons&b] &9Disabled &fBuild mode!");
+                    plr.sendMessage("&f&lArctic&b&lPrison &8➣ &9Disabled &fBuild mode!");
                 } else {
                     plr.buildMode = true;
-                    plr.sendMessage("&b[&fArctic Prisons&b] &9Enabled &fBuild mode!");
+                    plr.sendMessage("&f&lArctic&b&lPrison &8➣ &9Enabled &fBuild mode!");
                 }
                 return true;
             }

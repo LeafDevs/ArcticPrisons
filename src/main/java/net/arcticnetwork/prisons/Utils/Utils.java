@@ -13,6 +13,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -36,6 +38,32 @@ public class Utils {
     public static boolean hasPlayerData(Player p) {
         File f = new File(Main.getPlugin().getDataFolder().getPath() + "/playerData", p.getUniqueId() + ".yml");
         return f.exists();
+    }
+
+    public static String colorText(String s) {
+        return s.replace("&", "\u00a7");
+    }
+
+    public static String serializeNumber(int num) {
+        String stringBuilder = "";
+        int e = 0;
+        String l = "";
+        if (num > Math.pow(10,9)) {
+            e = 9;
+            l = "B";
+        }else if (num > Math.pow(10,6)) {
+            e = 6;
+            l = "M";
+        }else if (num > Math.pow(10,3)) {
+            e = 3;
+            l = "K";
+        }
+        BigDecimal numberBigDecimal = new BigDecimal(num / Math.pow(10, e));
+        numberBigDecimal = numberBigDecimal.setScale(1, RoundingMode.HALF_EVEN);
+        stringBuilder = numberBigDecimal + l;
+        if (stringBuilder.contains(".0"))
+            stringBuilder = stringBuilder.replace(".0", "");
+        return stringBuilder;
     }
 
     public static String getPrestigePrefix(long prestige) {

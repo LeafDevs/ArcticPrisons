@@ -42,7 +42,7 @@ public class CMDWarp implements CommandExecutor {
                     PClass pClass = Main.getPClass(plr);
                     if(!Utils.checkEmptyString(arg3[1])) {
                         if(!plr.hasPermission("arcticprisons.admin")) {
-                            pClass.sendMessage("&b[&fArctic Prisons&b] &fYou do not have permission to teleport others to a mine.");
+                            pClass.sendMessage("&f&lArctic&b&lPrison &8➣ &fYou do not have permission to teleport others to a mine.");
                             return false;
                         }
                         Player toTP = Bukkit.getPlayer(arg3[1]);

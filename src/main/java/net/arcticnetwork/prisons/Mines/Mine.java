@@ -83,7 +83,7 @@ public abstract class Mine extends Utils{
             Utils.fillBox(pos1, pos2, getBlocks());
             for(Player p : Bukkit.getOnlinePlayers()) {
                 PClass pClass = Main.getPClass(p);
-                pClass.sendMessage("&b[&fArctic Prisons&b] &fMine " + getName() + " was reset!");
+                pClass.sendMessage("&f&lArctic&b&lPrison &8➣ &fMine " + getName() + " was reset!");
             }
         } catch(Exception e) {
             log("Failed to reset mine. One of the positions are invalid!");

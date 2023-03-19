@@ -18,20 +18,20 @@ public class CMDPermission extends Utils implements CommandExecutor {
                 if(args.length == 1) {
                     if(Main.getPClass(p).permissions.contains(args[0])) {
                         Main.getPClass(p).permissions.remove(args[0]);
-                        Main.getPClass(p).sendMessage("&b[&fArctic Prisons&b] &9Successfully removed the permission: " + args[0]);
+                        Main.getPClass(p).sendMessage("&f&lArctic&b&lPrison &8➣ &9Successfully removed the permission: " + args[0]);
                     } else {
                         Main.getPClass(p).permissions.add(args[0]);
-                        Main.getPClass(p).sendMessage("&b[&fArctic Prisons&b] &9Successfully gave yourself the permission: " + args[0]);
+                        Main.getPClass(p).sendMessage("&f&lArctic&b&lPrison &8➣ &9Successfully gave yourself the permission: " + args[0]);
 
                     }
                 } else if(args.length == 2) {
                     PClass g = Main.getPClass(Bukkit.getPlayer(args[1]));
                     if(g.permissions.contains(args[0])) {
                         g.permissions.remove(args[0]);
-                        Main.getPClass(p).sendMessage("&b[&fArctic Prisons&b] &9Successfully removed the permission: " + args[0]);
+                        Main.getPClass(p).sendMessage("&f&lArctic&b&lPrison &8➣ &9Successfully removed the permission: " + args[0]);
                     } else {
                         g.permissions.add(args[0]);
-                        Main.getPClass(p).sendMessage("&b[&fArctic Prisons&b] &9Successfully gave yourself the permission: " + args[0]);
+                        Main.getPClass(p).sendMessage("&f&lArctic&b&lPrison &8➣ &9Successfully gave yourself the permission: " + args[0]);
 
                     }
                 }

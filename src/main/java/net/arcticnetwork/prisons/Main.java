@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 
 import net.arcticnetwork.prisons.Commands.*;
 import net.arcticnetwork.prisons.Mines.*;
+import net.arcticnetwork.prisons.items.misc.Token;
+import net.arcticnetwork.prisons.items.pickaxes.StarterPickaxe;
 import net.arcticnetwork.prisons.listeners.BlockBreakListener;
 import net.arcticnetwork.prisons.listeners.ChatListener;
 import net.arcticnetwork.prisons.listeners.PlayerJoinListener;
@@ -39,6 +41,7 @@ public class Main extends JavaPlugin {
     public static final Logger log = Logger.getLogger("Minecraft");
 
     private static Economy tokens = null;
+    private static Economy money = null;
 
 
 
@@ -72,6 +75,7 @@ public class Main extends JavaPlugin {
         getCommand("build").setExecutor(new CMDBuild());
         getCommand("permission").setExecutor(new CMDPermission());
         getCommand("edit").setExecutor(new CMDEdit());
+        getCommand("get").setExecutor(new CMDGet());
         // events
         Bukkit.getPluginManager().registerEvents(new BlockBreakListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), this);
@@ -83,6 +87,10 @@ public class Main extends JavaPlugin {
         new RankFour();
         new RankFive();
         new RankSix();
+
+        // Custom items
+        new StarterPickaxe();
+        new Token();
     }
 
     private boolean setupEconomy() {
@@ -90,10 +98,12 @@ public class Main extends JavaPlugin {
             return false;
         }
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+        RegisteredServiceProvider<Economy> rspp = getServer().getServicesManager().getRegistration(Economy.class);
         if (rsp == null) {
             return false;
         }
         tokens = rsp.getProvider();
+        money = rspp.getProvider();
         return tokens != null;
     }
 
@@ -101,6 +111,9 @@ public class Main extends JavaPlugin {
 
     public static Economy getTokens() {
         return tokens;
+    }
+    public static Economy getMoney() {
+        return money;
     }
 
     
